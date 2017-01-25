@@ -2,14 +2,16 @@
 source "https://rubygems.org"
 
 ruby '2.3.3'
+
+gem 'sinatra'
+gem 'rspec-sinatra'
+gem 'data_mapper'
+gem 'dm-postgres-adapter'
+gem 'database_cleaner'
+gem 'dm-transactions'
+
 # gem "rails"
 group :test do
-  gem 'sinatra'
-  gem 'rspec-sinatra'
-  gem 'rspec'
   gem 'capybara'
-  gem 'data_mapper'
-  gem 'dm-postgres-adapter'
-  gem 'database_cleaner'
-  gem 'dm-transactions'
+  gem 'rspec'
 end
