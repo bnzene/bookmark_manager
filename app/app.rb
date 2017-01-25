@@ -2,7 +2,7 @@ require 'sinatra/base'
 require_relative 'models/link'
 
 class BookmarkManager < Sinatra::Base
-  enable :sessions
+#  enable :sessions
 
   get '/links' do
     @links = Link.all
