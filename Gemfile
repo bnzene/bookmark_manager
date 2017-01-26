@@ -10,6 +10,7 @@ gem 'dm-postgres-adapter'
 gem 'database_cleaner'
 gem 'dm-transactions'
 gem 'dm-migrations'
+gem 'pry-byebug'
 
 # gem "rails"
 group :test do

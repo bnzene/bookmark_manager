@@ -4,6 +4,7 @@ require 'sinatra/base'
 # require_relative 'models/link'
 # require_relative 'models/tag'
 require_relative 'data_mapper_setup'
+require 'pry-byebug'
 
 class BookmarkManager < Sinatra::Base
 #  enable :sessions
@@ -23,6 +24,11 @@ class BookmarkManager < Sinatra::Base
       Tag.first_or_create(name: params[:tags])
       ])
     redirect '/links'
+  end
+
+  get '/tags/:name' do |name|
+    @links = Tag.all(:name => name).links
+    erb :'links/index'
   end
 
   run! if app_file == $0
