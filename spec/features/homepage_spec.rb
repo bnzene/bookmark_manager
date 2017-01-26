@@ -4,7 +4,8 @@
 
 feature 'Display links' do
   scenario 'display links when user visits homepage' do
-    Link.create(url: 'https://github.com', title: 'Github')
+    tags = [Tag.first_or_create(name: 'development')]
+    Link.create(url: 'https://github.com', title: 'Github', tags: tags)
     visit '/links'
     expect(page.status_code).to eq 200
     within 'ul#links' do

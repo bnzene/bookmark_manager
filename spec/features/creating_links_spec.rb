@@ -4,4 +4,8 @@ feature 'Saving website link' do
     expect(page.status_code).to eq 200
     expect(page).to have_content(:title)
   end
+  scenario 'User can include tags with saved links' do
+    create_tagged_link
+    expect(page).to have_content('music')
+  end
 end
