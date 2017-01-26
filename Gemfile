@@ -11,6 +11,7 @@ gem 'database_cleaner'
 gem 'dm-transactions'
 gem 'dm-migrations'
 gem 'pry-byebug'
+gem 'rake'
 
 # gem "rails"
 group :test do
