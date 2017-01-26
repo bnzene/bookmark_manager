@@ -6,6 +6,6 @@ def create_link
   click_button 'Submit'
 end
 
-def create_tagged_link
-  create_link{fill_in :tags, :with => 'music'}
+def create_tagged_link(tag = 'music')
+  create_link{fill_in :tags, :with => tag}
 end
